@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+      <meta name="theme-color" content="#428ECC">
+	<link href="css/ghpages-materialize.css" type="text/css" rel="stylesheet" media="screen,projection">
+	<link type="text/css" rel="stylesheet" href="css/estilo.css"  media="text/css"/>
+    <link href="css/prism.css" rel="stylesheet">
+	<title>Contratos</title>
+</head>
+<body>
+<div class="container">
+<div class="row">
+	<div class="col l6 offset-l3 s12 m12 z-depth-2"style="margin-top: 1em;padding-bottom:4em;" >
+
+	<form action="procesador.php" method="post" style="padding: 2em 1em;">
+	<h4>Generador de contratos para MS Word</h4>
+		<div class="input-field col l12 m12 s12"> <input type="text" name="nombre" />
+		<label for="first_name">Nombre</label>
+		</div>
+		<div class="input-field col l12 m12 s12"> <input type="text" name="apellido" />
+		<label for="first_name">Apellidos</label>
+		</div>
+		<div class="input-field col l12 m12 s12"> <input class="datepicker" type="date" name="fecha" />
+		<label for="first_name">Fecha</label>
+		</div>
+		<!--<div class="right">
+			<a class="waves-effect waves-light btn modal-trigger btn-large " href="#modal1"><i class="small mdi-file-file-download left"></i>Exportar</a>
+		</div>-->
+
+		<div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+    <a class="btn-floating btn-large red">
+      <i class="large mdi-editor-mode-edit"></i>
+    </a>
+    <ul>
+      <li><a href="#modal1" class="btn-floating red modal-trigger tooltipped" data-position="left" data-delay="50" data-tooltip="Exportar"><i class="small mdi-file-file-download left"></i></a></li>
+      <li><a href="#modal2" class="btn-floating red modal-trigger tooltipped" data-position="left" data-delay="50" data-tooltip="Guardar"><i class="tiny mdi-content-save left"></i></a></li>
+      
+      
+    </ul>
+  </div>
+<!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Tipos de contratos para exportar</h4>
+      <button type="submit" class=" btn-large" style="margin:1%;" id="contrato1" value="contrato 1" name="contrato" ><i class="small mdi-editor-insert-drive-file left"></i>Contrato 1</button>
+		<button type="submit" class=" btn-large" style="margin:1%;" id="contrato2" value="contrato 2" name="contrato2" ><i class="small mdi-editor-insert-drive-file left"></i>Contrato 2</button>
+		<button type="submit" class=" btn-large disabled" style="margin:1%;" id="contrato3" value="contrato 3" name="contrato3" ><i class="small mdi-editor-insert-drive-file left"></i>Contrato 3</button>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Listo</a>
+    </div>
+  </div>
+
+  <!-- Modal Structure -->
+  <div id="modal2" class="modal" style="padding-bottom:1em;">
+    <div class="modal-content">
+      <h4>Guardar</h4>
+      <p>Realmente deseas guardar los cambios?</p>
+    </div>
+    <div class="modal-footer">
+
+     
+      <button type="submit" class=" btn-large green lighten-1" style="margin:1%;" id="save" value="contrato 3" name="save" >Guardar</button>
+       <button type="" class=" btn-large red darken-4" style="margin:1%;" id="save" value="contrato 3" name="save" >Descartar</button>
+    </div>
+  </div>
+
+	</form>
+	</div>
+</div>
+</div>
+</body>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.js"></script>
+      <script>
+      $(".button-collapse").sideNav();
+       $(document).ready(function(){
+    $('.collapsible').collapsible({
+      accordion : true, // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+      menuWidth: 300,
+      opacity: .3,
+
+    });
+  }); 
+        $(document).ready(function(){
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    $('.modal-trigger').leanModal({
+    	dismissible: true,
+    	in_duration: 300,
+
+    });
+  });
+        $('.datepicker').pickadate({
+    selectMonths: true, // Creates a dropdown to control month
+    selectYears: 20 // Creates a dropdown of 15 years to control year
+  });
+        $('#yourElement').addClass('animated bounceOutLeft');
+         $('select').material_select('destroy');
+      </script>
+</html>

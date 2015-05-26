@@ -1,0 +1,55 @@
+.logo-principal{
+	margin-left: 1em;
+}
+#contenido-principal{
+  margin-top: -15%;
+}
+.menu-lateral{
+	padding-top: 52px;
+}
+
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+  .login-box{
+    padding: 3em 1em !important;
+    background-color: red;
+  }
+
+ .main {
+    flex: 1 0 auto;
+    padding-left: 240px !important;
+  }
+  .page-title{
+  	font-size: 36px !important;
+  }
+  .top-nav{
+  	margin-top: 1em !important;
+  }
+  .contenido-principal{
+  	padding: 0em 2em !important;
+  }
+  .red:hover{
+  	background-color: blue;
+  }
+ #menu-agregar{
+ 	animation-delay: 1s;
+  	-vendor-animation-delay: 1s;
+  }
+ #menu-administracion{
+ 	animation-delay: 2s;
+  	-vendor-animation-delay: 2s;
+  }
+  .card-image {
+    height: 80px;
+  }
+ @media only screen and (min-width : 450px) {
+  #contenido-principal{
+  margin-top: -50%;
+}
+    nav .nav-wrapper a.page-title {
+    font-size: 20px !important;
+  } }
